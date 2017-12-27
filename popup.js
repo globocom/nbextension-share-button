@@ -15,9 +15,19 @@ define([], function() {
     close_button.setAttribute('id', 'close-popup')
     close_button.append(close_icon)
 
+    var copy_icon = document.createElement('i')
+    copy_icon.setAttribute('class', 'fa fa-clipboard')
+
+    var copy_button = document.createElement('button')
+    copy_button.setAttribute('id', 'copy-btn')
+    copy_button.setAttribute('class', 'btn btn-default')
+    copy_button.setAttribute('data-clipboard-target', '#permalink-text')
+    copy_button.append(copy_icon)
+
     var permalink_area = document.createElement('div')
     permalink_area.setAttribute('id', 'permalink-area')
     permalink_area.append(permalink_text)
+    permalink_area.append(copy_button)
 
     var popup = document.createElement('div')
     popup.setAttribute('id', 'share-notebook-popup')

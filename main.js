@@ -20,6 +20,18 @@ define([
         link.href = requirejs.toUrl('./share-popup.css')
         document.getElementsByTagName('head')[0].appendChild(link)
 
+        //load clipboard lib
+        require.config({
+            appDir: '.',
+            paths: {
+                'clipboard': ['https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min']
+            }
+        })
+
+        require(['clipboard'], function(Clipboard) {
+            var clipboard = new Clipboard('#copy-btn')
+        })
+
         // add the popup to the page
         $('body').append(popup)
 
@@ -28,7 +40,7 @@ define([
           $('#share-notebook-popup').hide()
         })
 
-        // dd the share-notebook button to the toolbar
+        // add the share-notebook button to the toolbar
         $(Jupyter.toolbar.add_buttons_group([
             Jupyter.keyboard_manager.actions.register({
                 help   : 'Opens share-notebook popup',
