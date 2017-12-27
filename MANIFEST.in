@@ -1,0 +1,5 @@
+include README.md
+
+recursive-include nbextension-share-button *
+recursive-exclude * __pyce__
+recursive-exclude * *.py[co]
