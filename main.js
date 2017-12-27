@@ -23,7 +23,12 @@ define([
         // add the popup to the page
         $('body').append(popup)
 
-        // add the share-notebook button to the toolbar
+        // bind hide-popup function to the close button
+        $('#close-popup').click(function() {
+          $('#share-notebook-popup').hide()
+        })
+
+        // dd the share-notebook button to the toolbar
         $(Jupyter.toolbar.add_buttons_group([
             Jupyter.keyboard_manager.actions.register({
                 help   : 'Opens share-notebook popup',
