@@ -4,6 +4,14 @@
 
 A Jupyter Notebook extension that adds a share button to the toolbar.
 
+Screenshots
+------------
+Button in the toolbar:  
+![share-button](share-button.jpg)
+
+Popup with the link:  
+![share-popup](share-popup.jpg)
+
 
 Installation
 ------------
