@@ -2,7 +2,7 @@
 
 define([], function() {
     var url = document.location.href
-    var permalink = url.replace(/\/user\/.+\//, '/user-redirect/')
+    var permalink = url.replace(/\/user\/.+?\//, '/user-redirect/')
 
     var permalink_text = document.createElement('div')
     permalink_text.setAttribute('id', 'permalink-text')
