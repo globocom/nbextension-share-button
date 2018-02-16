@@ -38,9 +38,14 @@
   width: 25em;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: clip;
+  overflow-x: auto;
   border: 1px solid #CCCCCC;
   background: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 #close-popup {
